@@ -1,5 +1,5 @@
 import { Controller,Get,Post,Put,Delete,HttpStatus,Res, HttpCode } from '@nestjs/common';
-import { Response, response } from 'express';
+import { Response, } from 'express';
 
 @Controller('crud')
 export class CrudController {
