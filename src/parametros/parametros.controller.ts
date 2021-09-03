@@ -6,7 +6,7 @@ export class ParametrosController {
     @Get()
     getCrud(@Res() response:Response,@Query() query:any ):Response {
         Logger.log(query);
-        return response.status(HttpStatus.OK, ).send({//CODE 200
+        return response.status(200).send({
             name:"get",
             query:'EjemploGet1=1&queryEjemploGet2=2&queryEjemploGet3=3 '
         })
@@ -19,7 +19,7 @@ export class ParametrosController {
     deleteCrud(@Res() response:Response,@Query() query:any ):Response {
         
         Logger.log(query);
-            return response.status(HttpStatus.OK, ).send({//CODE 200
+            return response.status(200 ).send({
             name:"delete",
             query:'queryEjemploDelete: 1 '
         })
@@ -33,7 +33,7 @@ export class ParametrosController {
     postCrud(@Res() response:Response,@Query() query:any ,@Body() body: JSON):Response {
         
         Logger.log(body);
-        return response.status(HttpStatus.CREATED).send({//CODE 202
+        return response.status(200).send({
             name:"post",
             body:{'infoBodyPost':'jsonEnviadoEnElBody'}
         })
@@ -45,7 +45,7 @@ export class ParametrosController {
     @Put()
     putCrud(@Res() response:Response,@Query() query:any ,@Body() body: JSON ):Response {
         Logger.log(query);
-        return response.status(HttpStatus.CONFLICT).send({//CODE 409
+        return response.status(200).send({
             name:"put",
             query:'queryEjemploPut=1',
             body:{'infoBodyPust':'jsonEnviadoEnElBody'}
